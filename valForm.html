@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Alta cliente</h1>   
+  <form action="alta-cliente.php"
+  onsubmit=" return validaFormulario()">
+    <p>
+    <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" placeholder="Escribe su nombre">
+    </p>
+    <p>
+        <label for="edad">Edad:</label>
+            <input type="text" name="nombre" placeholder="Escribe su nombre">
+        </p>
+    <p>
+        <label for="provincia">Provincua </label>
+            <select name="provicia" id="provicia">
+                <option value="elija">Elija una ...</option>
+                <option value="to">Toledo</option>
+                <option value="to">Toledo</option>
+                <option value="to">Toledo</option>
+                <option value="to">Toledo</option>
+                <option value="to">Toledo</option
+
+            </select>
+            <label for="acepto">
+                He leido y acepto las condiciones
+            </label><input checked type="checkbox" id="acepto" name="acepto">
+    </p>
+<input type="subit" value="Dar de Alta">
+</form>
+<script>
+    function validaFormulario(){
+        let nombre = document.getElementById ("nombre");
+        if(nombre.valvue.length <6){
+            alert("la longitud minima del nombre es de 6 caracteres")
+            nombre.focus();
+            return false;
+        }
+        let edad = document.getElementById ("nombre");    
+
+        if(edad.valvue<18){
+            alert("la edad minima es de 18")
+            edad.focus():
+            return false;
+        }
+        let provicia = document.getElementById ("provincia");
+        if(edad.valvue<18){
+            alert("Debe seleccionar una provincia")
+            provicia.focus();
+            return false;
+        }
+        let acepto = document.getElementById ("acepto");
+        if(acepto.checked == false){
+            alert("Debe sDE leer u acptar las condicioneseleccionar una provincia")
+            provicacepto.focus();
+            return false;
+        }
+       alert ("Datos correctos. Procedo en enviar");
+       return true;
+    }
+
+</script>
+</body>
+</html>
